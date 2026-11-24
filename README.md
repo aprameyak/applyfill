@@ -29,6 +29,21 @@ npm run build
 
 Then load the `dist` folder as an unpacked extension. Chrome 124 or newer is required.
 
+After loading the extension for the first time, you can reload it whenever you rebuild:
+
+1. Run `npm run build` to generate the updated `dist` folder.
+2. Open `chrome://extensions` in Chrome.
+3. Find the ApplyFill extension and click its **Reload** icon.
+4. Refresh the webpage where you are testing ApplyFill if needed.
+
+### Debugging extension logs
+
+To inspect logs while debugging:
+
+- **Background service worker:** Open `chrome://extensions`, find ApplyFill, and click the **service worker** link under Inspect views. This opens its DevTools console.
+- **Popup:** Open the ApplyFill popup, right-click inside it, and select **Inspect** to view its console.
+- **Content script:** Open the webpage where ApplyFill is running, open Chrome DevTools, and check the **Console** tab. Select the relevant frame or execution context if needed.
+
 ## Use
 
 1. The settings page opens after install. Upload a resume or fill in the profile, then save.
